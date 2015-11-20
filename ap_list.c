@@ -12,7 +12,7 @@ create_list(char *bssid, int channel)
 #ifdef _DEBUG_APLIST
     printf("\n creating list as [%s]\n", bssid);
 #endif
-    struct ap_struct *ptr =	(struct test_struct *) malloc(sizeof(struct ap_struct));
+    struct ap_struct *ptr = (struct test_struct *) malloc(sizeof(struct ap_struct));
     if (NULL == ptr) {
 		printf("\n creation failed \n");
 	return NULL;
