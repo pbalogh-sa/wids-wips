@@ -6,8 +6,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Greeting
-          command: echo Hello, world.
+          name: build
+          command: make
       - run:
           name: Print the Current Time
           command: date
