@@ -2,12 +2,12 @@ version: 2
 jobs:
   build:
     docker:
-      - image: debian:stretch
+      - image: debian:stretch 
+    environment:
+      MAKEFLAGS: "-i"
+    branches:
+      only:
+        - master
     steps:
-      - checkout
-      - run:
-          name: build
-          command: make
-      - run:
-          name: Print the Current Time
-          command: date
+      - run: make
+      - run: make install
